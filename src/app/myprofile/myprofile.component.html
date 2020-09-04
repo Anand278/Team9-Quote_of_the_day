@@ -1,0 +1,74 @@
+
+<div class="container-fluid">
+    
+    <div class="row">
+        <div class="col-12 d-flex justify-content-center align-items-center">
+            <h1 class="h1">" Enter Your Quote "</h1>
+        </div>
+    </div>
+        <!--second row-->
+        <div class="row justify-content-center">
+            <div class=" col-6 card cardclass">
+                <img src="https://picsum.photos/400/190" class="card-img">
+                <div class="card-img-overlay justify-content-center align-items-center" [formGroup]="fbFormGroup"
+                      style="color: white; font-weight: 30px;">
+                    
+                    <!--inputbox-->
+                    <!--qoute id-->
+                     <div class="searchbox position-static" >
+                    <input type="text"  class="form-control inputbox" style="height: 10vh;" formControlName="id"  
+                    placeholder="enter your quote No">
+                    </div>
+                    
+                    <!--qoute-->
+                    <div class="searchbox position-static">
+                    <input type="text"  class="form-control inputbox" formControlName="qoute"  
+                    placeholder="enter your quote">
+                    </div>
+              </div>
+              
+        </div>
+        </div>
+<!--create button-->
+        <div class="row justify-content-center">
+                <button type="button" class="btn btn-secondary btn-lg addtogallery" [disabled]="!fbFormGroup.valid" (click)="addqoute()">
+                Add To Gallery</button>
+        </div>
+        <div class="row justify-content-center">
+                <button type="button" class="btn btn-secondary btn-lg addtogallery" (click)="showqoute()">
+                Show Gallery</button>
+        </div>
+
+    <!--clone node-->
+    <!-- <div>{{fbFormGroup.value | json}}</div> -->
+    <div
+    class="border border-danger rounded-lg d-flex justify-content-center 
+    align-items-center my-1 clonediv"
+    *ngFor="let item of list">
+    Quote No: "{{ item.id }}" <br>
+    Quote : "{{ item.qoute }}"
+  </div>
+
+  <!--delete quote-->
+    <div>
+        <app-delete></app-delete>
+    </div>
+   
+
+ <!--footer-->
+        <div class="row bg-secondary" style="height: 15vh;">
+                <div class="col-12 d-flex justify-content-center">
+                    <div class="row footer">Contact Us</div> 
+                </div> 
+                <div class="col-12 d-flex justify-content-center">
+                    <div class="row footer">Anjali Sonawane : 
+                        <p>EmailID: anjalisoanwane.24@gmail.com</p>
+                    </div> 
+                </div>
+                <div class="col-12 d-flex justify-content-center">
+                    <div class="row footer">Anand Gujja : 
+                        <p>EmailID: anand.gujja.07@gmail.com</p>
+                    </div> 
+                </div>   
+        </div>
+</div>

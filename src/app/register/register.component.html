@@ -1,0 +1,96 @@
+<div class="container-fluid bgimg">
+  <div class="row" style="height: 100vh">
+    <!-- Left Block -->
+    <div
+      class="col d-flex text-light flex-column justify-content-center align-items-center"
+    >
+      <div class="h2">
+          <fa-icon [icon]="faQuoteLeft" ></fa-icon> <br>
+          <em> Life has two rules : <br> #1 Never Quit <br> #2 Always remember rule #1.</em>
+          <div class="col d-flex justify-content-end">
+          <h2><fa-icon [icon]="faQuoteRight" ></fa-icon></h2>
+      </div>
+     
+  </div>
+    </div>
+
+    <!-- Right Block-->
+    <div
+      class="col d-flex text-light flex-column justify-content-center align-items-center"
+      [formGroup]="fbFormGroup"
+    >
+      <div class="alert alert-danger" role="alert" *ngIf="uiInvalidCredential">
+       password does not match!!
+      </div>
+
+      <div class="main-form">
+      <div class="h1">Register Form</div>
+
+      <div class="mt-3">
+        <input
+          type="text"
+          placeholder="Enter Username"
+          class="form-control"
+          formControlName="username"
+        />
+      </div>
+
+      <div class="mt-1">
+        <input
+          type="email"
+          placeholder="Enter Email"
+          class="form-control"
+          formControlName="email"
+        />
+      </div>
+
+      <div class="mt-1">
+        <input
+          type="password"
+          placeholder="Enter password"
+          class="form-control"
+          formControlName="password"
+        />
+      </div>
+
+      <div class="mt-1">
+        <input
+          type="password"
+          placeholder="confirm password"
+          class="form-control"
+          formControlName="confirmpassword"
+        />
+      </div>
+
+      <div class="text-center">
+      <button
+        class="btn btn-block btn-primary mt-2 mb-2"
+        [disabled]="!fbFormGroup.valid"
+        (click)="signuphere()"
+      >
+        REGISTER
+      </button>
+      </div>
+
+     <div class="text-center">
+      <button
+        class="btn btn-block btn-primary mt-2 mb-2"
+        routerLink="/login"
+      >
+        LOGIN
+      </button>
+      </div>
+      </div>
+      <div class="main-form">
+        <div class="text-center">
+          <button
+            class="btn btn-block btn-primary mt-2 mb-2"
+            routerLink="/main"
+          >
+            Go to Home 
+          </button>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>

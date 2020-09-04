@@ -1,0 +1,28 @@
+
+.footer{
+    margin: 0px;
+    color: white; font-family: cursive;
+    }
+
+    .h1{
+        font-weight: bold;
+        font-size: 50px;
+        color: rgba(31, 6, 6, 0.767);
+        text-align: center;
+    }
+
+
+    .h3 {
+        font-weight: bold;
+        /* font-size: px; */
+        color: rgba(31, 6, 6, 0.767);
+        text-align: center;
+    }
+.b{
+    padding: 5px; 
+    margin: 10px; 
+    size: 50px;
+    font-weight: bold;
+    color: rgba(31, 6, 6, 0.767);
+    font-family: cursive;
+}

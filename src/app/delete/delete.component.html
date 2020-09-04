@@ -1,0 +1,21 @@
+
+<div class="row border-secondary mt-3 mb-3 rounded" style="align-items: center;justify-content: center; " >
+      
+    <div class="col-4" style="display: flex;justify-content: center;align-items: center;border: 2px;
+    border-style: solid;
+border-color: gray; flex-direction: column;">
+        Enter id of Quote to delete <br>
+        
+        <input type="text" class="form-control form-control-sm mt-2" placeholder="Enter id here"
+         [formControl] = "pid" >
+        <button type="button" class="btn btn-danger mt-2 mb-2" [disabled] = "!pid.valid" (click) ="delete()">
+        Delete Quote</button>
+        <div class="alert alert-primary" role="alert" *ngIf="alert1">
+         Quote deleted sucessfully
+        </div>
+        <div class="alert alert-danger" role="alert" *ngIf="alert2">
+          alert(Error Plz cheack id);
+        </div>
+    </div>
+</div>
+
